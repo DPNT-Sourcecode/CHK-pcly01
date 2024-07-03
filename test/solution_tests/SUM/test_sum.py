@@ -19,10 +19,3 @@ class TestSum():
     def test_sum_negative_integer(self):
         with pytest.raises(ValueError):
             sum_solution.compute(-1, 100)
-
-
-
-
-
-
-
