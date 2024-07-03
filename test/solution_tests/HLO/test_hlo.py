@@ -10,4 +10,4 @@ class TestHlo():
 
     def test_hlo_test_no_name_provided(self):
         with pytest.raises(ValueError):
-            hello_solution.hello()
+            hello_solution.hello('')
