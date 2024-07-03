@@ -5,7 +5,10 @@ prices = { 'A': 50,'B': 30,'C': 20,'D': 15 }
 def checkout(skus):
     res = {}
 
-    for c in skus:
-        res[c] = res.get(c, 0) + 1
+    for s in skus:
+        res[s] = res.get(s, 0) + 1
 
+    total = 0
 
+    for r in res.keys():
+        total = 
