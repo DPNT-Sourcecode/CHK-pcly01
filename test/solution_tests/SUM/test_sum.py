@@ -16,7 +16,8 @@ class TestSum():
         self.assertRaises(ValueError, sum_solution.compute(101, 100))
         
     def test_sum_negative_integer(self):
-        self.assertRaises(ValueError, sum_solution.compute(-1, 10))
+        self.assertRaises(ValueError, sum_solution.compute(-1, 100))
+
 
 
 
