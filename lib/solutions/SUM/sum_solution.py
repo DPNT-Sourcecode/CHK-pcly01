@@ -6,5 +6,3 @@ def compute(x, y):
 
 def validate_input(num):
     return num < 0 or num > 100
-
-

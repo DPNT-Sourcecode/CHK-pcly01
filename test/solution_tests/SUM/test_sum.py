@@ -27,4 +27,3 @@ class TestSum():
     def test_sum_negative_integer_y(self):
         with pytest.raises(ValueError):
             sum_solution.compute(10, -1)
-
