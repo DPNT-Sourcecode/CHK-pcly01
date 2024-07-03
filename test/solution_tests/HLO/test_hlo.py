@@ -1,6 +1,5 @@
-from lib.solutions.HLO import sum_solution
-import pytest
+from lib.solutions.HLO import hello_solution
 
 class TestHlo():
-    def test_sum(self):
-        assert sum_solution.compute(1, 2) == 3
+    def test_hlo(self):
+        assert hello_solution.hello('wave') == 'Hello world'
