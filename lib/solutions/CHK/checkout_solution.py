@@ -15,6 +15,8 @@ def checkout(skus):
     total = 0
 
     for r in res.keys():
+        if not r in prices:
+            raise ValueError('invalid sku')
         total += (res[r] * prices[r])
 
     return total
