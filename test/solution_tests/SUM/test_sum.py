@@ -1,4 +1,4 @@
-from solutions.SUM import sum_solution
+from lib.solutions.SUM import sum_solution
 import unittest
 
 
@@ -17,6 +17,7 @@ class TestSum():
         
     def test_sum_negative_integer(self):
         self.assertRaises(ValueError, sum_solution.compute(-1, 100))
+
 
 
 
