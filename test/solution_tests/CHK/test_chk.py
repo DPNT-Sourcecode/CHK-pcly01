@@ -23,10 +23,16 @@ class TestChk():
     def test_chk_complicated_list(self):
         assert checkout_solution.checkout('A A A B B C C C D D D') == 280
 
+    def test_chk_lower_case_list(self):
+        assert checkout_solution.checkout('a b c') == 100
+
+    def test_chk_no_spaces(self):
+        assert checkout_solution.checkout('ABC') == 100
+
     def test_chk_invalid_letter(self):
             with pytest.raises(ValueError):
                 checkout_solution.checkout('E')
 
     def test_chk_no_input(self):
             with pytest.raises(ValueError):
-                checkout_solution.checkout('E')
+                checkout_solution.checkout('')
