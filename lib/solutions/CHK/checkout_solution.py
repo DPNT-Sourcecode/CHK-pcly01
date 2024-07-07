@@ -24,7 +24,7 @@ def checkout(skus):
     for offer in new_offers:
         times_met = offer_met(res, offer['counts'])
         if times_met > 0:
-            total += offer['price'] * times_met
+            total += (offer['price'] * times_met)
             for o in offer['counts']:
                 res[o] = res.get(o, 0) - (offer['counts'][o] * times_met)
 
@@ -48,7 +48,7 @@ def offer_met(results, offer_count):
                 return 0
             else:
                 matched_count = results[o] // offer_count[o]
-                if matched_count < times_matched:
+                if matched_count > times_matched:
                     times_matched = matched_count
     if times_matched == -1:
         return 0
