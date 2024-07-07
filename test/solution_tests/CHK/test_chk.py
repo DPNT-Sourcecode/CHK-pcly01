@@ -23,7 +23,7 @@ class TestChk():
         assert checkout_solution.checkout('A A A B B C C C D D D') == 280
 
     def test_chk_lower_case_list(self):
-        assert checkout_solution.checkout('a b c') == 100
+        assert checkout_solution.checkout('a b c') == -1
 
     def test_chk_no_spaces(self):
         assert checkout_solution.checkout('ABC') == 100
@@ -32,4 +32,4 @@ class TestChk():
         assert checkout_solution.checkout('E') == -1
 
     def test_chk_no_input(self):
-        assert checkout_solution.checkout('') == -1
+        assert checkout_solution.checkout('') == 0

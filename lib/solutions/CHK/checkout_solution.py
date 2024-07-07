@@ -6,11 +6,11 @@ offers = { 'A': {'count': 3, 'price': 130 },'B': {'count': 2, 'price': 45 }}
 def checkout(skus):
 
     if not skus:
-        return -1
+        return 0
 
     res = {}
 
-    for s in skus.replace(' ','').upper():
+    for s in skus.replace(' ',''):
         res[s] = res.get(s, 0) + 1
 
     total = 0
