@@ -1,6 +1,11 @@
 prices = { 'A': 50,'B': 30,'C': 20,'D': 15,'E': 40 }
 offers = { 'A': {'count': 3, 'price': 130 },'B': {'count': 2, 'price': 45 }}
-
+new_offers = [
+    {'counts': {'A': 5}, 'price': 200},
+    {'counts': {'A': 3}, 'price': 130},
+    {'counts': {'E': 2, 'B': 1}, 'price': 80},
+    {'counts': {'B': 2}, 'price': 45},
+]
 
 # noinspection PyUnusedLocal
 # skus = unicode string
@@ -27,3 +32,4 @@ def checkout(skus):
         total += (res[r] * prices[r])
 
     return total
+
