@@ -33,8 +33,6 @@ def checkout(skus):
             print("total = ", total)
             print("res = ", res)
 
-    print("after all offers, res = ", res)
-
 
     for r in res.keys():
         if not r in prices:
@@ -49,20 +47,18 @@ def checkout(skus):
     return total
 
 def offer_met(results, offer_count):
-    times_matched = -1
-    print('offer count = ', offer_count)
+    times_matched = 1000
     for o in offer_count:
-        print("looking at ", o)
         if o in results:
             if results[o] < offer_count[o]:
                 return 0
             else:
                 matched_count = results[o] // offer_count[o]
-                print("matched count for ", o, " = ", matched_count)
                 if matched_count < times_matched:
                     times_matched = matched_count
-    if times_matched == -1:
+        else:
+            return 0
+    if times_matched == 1000:
         return 0
-    print("times_matched = ", times_matched)
     return times_matched
 
