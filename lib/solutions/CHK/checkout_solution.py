@@ -41,9 +41,9 @@ def checkout(skus):
 
 def offer_met(results, offer_count):
     for o in offer_count:
-        if o results and results[o] < offer_count[o]:
-            return False
-    return True
+        if not o in results or results[o] < offer_count[o]:
+            return 0
+    return results[r] // offers[r]['count']
 
 
 
