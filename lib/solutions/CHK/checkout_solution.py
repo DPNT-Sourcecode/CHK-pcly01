@@ -52,4 +52,5 @@ def offer_met(results, offer_count):
                     times_matched = matched_count
     if times_matched == -1:
         return 0
+    print("times_matched = ", times_matched)
     return times_matched
