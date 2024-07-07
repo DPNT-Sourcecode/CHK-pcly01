@@ -19,7 +19,10 @@ def checkout(skus):
         if not r in prices:
             raise ValueError('invalid sku')
         if r in offers:
-            
+            num_of_offer = res[r] // offers[r]['count']
+            if num_of_offer > 0:
+                total += offers[r]['price'] * num_of_offer
+                res[r] = res[r] % offers[r]['count']
         total += (res[r] * prices[r])
 
     return total
