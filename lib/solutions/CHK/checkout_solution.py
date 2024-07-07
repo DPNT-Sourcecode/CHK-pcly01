@@ -23,8 +23,10 @@ def checkout(skus):
 
     for offer in new_offers:
         if offer_met(res, offer['counts']):
-            total += offer[r]['price'] * num_of_offer
-            res[r] = res[r] % offers[r]['count']
+            total += offer['price']
+            for o in offer['counts']:
+                res[o] = res.get(o, 0) - offer['counts'][o]
+                res[] = res[r] % offers[r]['count']
 
     for r in res.keys():
         if not r in prices:
@@ -40,5 +42,6 @@ def checkout(skus):
 
 def offer_met(results, offer_count):
     
+
 
 
