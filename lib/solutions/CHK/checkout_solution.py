@@ -20,4 +20,3 @@ def checkout(skus):
         total += (res[r] * prices[r])
 
     return total
-
