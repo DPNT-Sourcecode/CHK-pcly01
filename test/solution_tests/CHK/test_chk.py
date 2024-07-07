@@ -2,13 +2,19 @@ from lib.solutions.CHK import checkout_solution
 
 class TestChk():
     def test_chk(self):
-        assert checkout_solution.checkout('A B C D') == 115
+        assert checkout_solution.checkout('A B C D E') == 155
 
     def test_chk_three_a_offer(self):
         assert checkout_solution.checkout('A A A') == 130
 
     def test_chk_double_three_a_offer(self):
-        assert checkout_solution.checkout('A A A A A A') == 260
+        assert checkout_solution.checkout('A A A A A A') == 250
+
+    def test_chk_five_a_offer(self):
+        assert checkout_solution.checkout('A A A A A') == 200
+
+    def test_chk_five_a_and_three_a_offer(self):
+        assert checkout_solution.checkout('A A A A A A A A') == 330
 
     def test_chk_two_b_offer(self):
         assert checkout_solution.checkout('B B') == 45
