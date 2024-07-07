@@ -1,5 +1,4 @@
 prices = { 'A': 50,'B': 30,'C': 20,'D': 15,'E': 40 }
-offers = { 'A': {'count': 3, 'price': 130 },'B': {'count': 2, 'price': 45 }}
 new_offers = [
     {'counts': {'A': 5}, 'price': 200},
     {'counts': {'A': 3}, 'price': 130},
@@ -18,30 +17,20 @@ def checkout(skus):
 
     for s in skus.replace(' ',''):
         res[s] = res.get(s, 0) + 1
-        
-    print("res = ", res)
 
     total = 0
 
     for offer in new_offers:
-        print("looking at offer ", offer)
         times_met = offer_met(res, offer['counts'])
         if times_met > 0:
             total += (offer['price'] * times_met)
             for o in offer['counts']:
                 res[o] = res.get(o, 0) - (offer['counts'][o] * times_met)
-            print("total = ", total)
-            print("res = ", res)
 
 
     for r in res.keys():
         if not r in prices:
             return -1
-        # if r in offers:
-        #     num_of_offer = res[r] // offers[r]['count']
-        #     if num_of_offer > 0:
-        #         total += offers[r]['price'] * num_of_offer
-        #         res[r] = res[r] % offers[r]['count']
         total += (res[r] * prices[r])
 
     return total
@@ -61,4 +50,5 @@ def offer_met(results, offer_count):
     if times_matched == 1000:
         return 0
     return times_matched
+
 
