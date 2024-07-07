@@ -6,7 +6,7 @@ offers = { 'A': {'count': 3, 'price': 130 },'B': {'count': 2, 'price': 45 }}
 def checkout(skus):
 
     if not skus:
-        raise ValueError('no input provided')
+        return -1
 
     res = {}
 
@@ -17,7 +17,7 @@ def checkout(skus):
 
     for r in res.keys():
         if not r in prices:
-            raise ValueError('invalid sku')
+            return -1
         if r in offers:
             num_of_offer = res[r] // offers[r]['count']
             if num_of_offer > 0:

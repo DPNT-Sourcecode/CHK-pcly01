@@ -1,5 +1,4 @@
 from lib.solutions.CHK import checkout_solution
-import pytest
 
 class TestChk():
     def test_chk(self):
@@ -30,9 +29,7 @@ class TestChk():
         assert checkout_solution.checkout('ABC') == 100
 
     def test_chk_invalid_letter(self):
-            with pytest.raises(ValueError):
-                checkout_solution.checkout('E')
+        assert checkout_solution.checkout('E') == -1
 
     def test_chk_no_input(self):
-            with pytest.raises(ValueError):
-                checkout_solution.checkout('')
+        assert checkout_solution.checkout('') == -1
