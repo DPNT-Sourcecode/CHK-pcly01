@@ -40,10 +40,14 @@ def checkout(skus):
     return total
 
 def offer_met(results, offer_count):
+    times_matched = 0
     for o in offer_count:
-        if not o in results or results[o] < offer_count[o]:
-            return 0
-    return results[r] // offers[r]['count']
+        if o in results:
+            if results[o] < offer_count[o]:
+                return 0
+            else:
+                results[r] // offers[r]['count']
+    return times_matched
 
 
 
