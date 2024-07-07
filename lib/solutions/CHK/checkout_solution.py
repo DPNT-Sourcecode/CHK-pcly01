@@ -1,4 +1,5 @@
 prices = { 'A': 50,'B': 30,'C': 20,'D': 15 }
+offers = { 'A': {'count': 3, 'price': 130 },'B': 30}
 
 # noinspection PyUnusedLocal
 # skus = unicode string
