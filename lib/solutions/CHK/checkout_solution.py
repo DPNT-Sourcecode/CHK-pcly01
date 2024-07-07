@@ -18,15 +18,23 @@ def checkout(skus):
 
     for s in skus.replace(' ',''):
         res[s] = res.get(s, 0) + 1
+        
+    print("res = ", res)
 
     total = 0
 
     for offer in new_offers:
+        print("looking at offer ", offer)
         times_met = offer_met(res, offer['counts'])
         if times_met > 0:
             total += (offer['price'] * times_met)
             for o in offer['counts']:
                 res[o] = res.get(o, 0) - (offer['counts'][o] * times_met)
+            print("total = ", total)
+            print("res = ", res)
+
+    print("after all offers, res = ", res)
+
 
     for r in res.keys():
         if not r in prices:
@@ -42,15 +50,19 @@ def checkout(skus):
 
 def offer_met(results, offer_count):
     times_matched = -1
+    print('offer count = ', offer_count)
     for o in offer_count:
+        print("looking at ", o)
         if o in results:
             if results[o] < offer_count[o]:
                 return 0
             else:
                 matched_count = results[o] // offer_count[o]
-                if matched_count > times_matched:
+                print("matched count for ", o, " = ", matched_count)
+                if matched_count < times_matched:
                     times_matched = matched_count
     if times_matched == -1:
         return 0
     print("times_matched = ", times_matched)
     return times_matched
+
