@@ -1,10 +1,13 @@
-prices = { 'A': 50,'B': 30,'C': 20,'D': 15,'E': 40,'F': 10,'G': 20,'H': 10,'I': 35,'J': 60,'K':80,  }
+prices = { 'A': 50,'B': 30,'C': 20,'D': 15,'E': 40,'F': 10,'G': 20,'H': 10,'I': 35,'J': 60,'K': 80,'L': 90,'M': 15,'N': 40,'O': 10,'P': 50,'Q': 30,'R': 50,'S': 30,'T': 20,'U': 40,'V': 50,'W': 20,'X': 90,'Y': 10,'Z': 50 }
 new_offers = [
     {'counts': {'A': 5}, 'price': 200},
     {'counts': {'A': 3}, 'price': 130},
     {'counts': {'E': 2, 'B': 1}, 'price': 80},
     {'counts': {'B': 2}, 'price': 45},
     {'counts': {'F': 3}, 'price': 20},
+    {'counts': {'H': 10}, 'price': 80},
+    {'counts': {'H': 5}, 'price': 45},
+    {'counts': {'K': 10}, 'price': 80},
 ]
 
 # noinspection PyUnusedLocal
@@ -51,3 +54,4 @@ def offer_met(results, offer_count):
     if times_matched == 1000:
         return 0
     return times_matched
+
