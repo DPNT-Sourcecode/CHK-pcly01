@@ -1,9 +1,10 @@
-prices = { 'A': 50,'B': 30,'C': 20,'D': 15,'E': 40 }
+prices = { 'A': 50,'B': 30,'C': 20,'D': 15,'E': 40,'F': 10 }
 new_offers = [
     {'counts': {'A': 5}, 'price': 200},
     {'counts': {'A': 3}, 'price': 130},
     {'counts': {'E': 2, 'B': 1}, 'price': 80},
     {'counts': {'B': 2}, 'price': 45},
+    {'counts': {'F': 3}, 'price': 20},
 ]
 
 # noinspection PyUnusedLocal
