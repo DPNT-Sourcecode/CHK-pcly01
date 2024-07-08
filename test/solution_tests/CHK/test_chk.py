@@ -47,7 +47,7 @@ class TestChk():
         assert checkout_solution.checkout('ABC') == 100
 
     def test_chk_invalid_letter(self):
-        assert checkout_solution.checkout('Z') == -1
+        assert checkout_solution.checkout('!') == -1
 
     def test_chk_no_input(self):
         assert checkout_solution.checkout('') == 0
