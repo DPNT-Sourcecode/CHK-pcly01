@@ -7,7 +7,14 @@ new_offers = [
     {'counts': {'F': 3}, 'price': 20},
     {'counts': {'H': 10}, 'price': 80},
     {'counts': {'H': 5}, 'price': 45},
-    {'counts': {'K': 10}, 'price': 80},
+    {'counts': {'K': 2}, 'price': 150},
+    {'counts': {'N': 3, 'M': 1}, 'price': 120},
+    {'counts': {'P': 5}, 'price': 200},
+    {'counts': {'R': 3, 'Q': 1}, 'price': 150},
+    {'counts': {'Q': 3}, 'price': 80},
+    {'counts': {'U': 4}, 'price': 120},
+    {'counts': {'V': 3}, 'price': 130},
+    {'counts': {'V': 2}, 'price': 90},
 ]
 
 # noinspection PyUnusedLocal
@@ -54,4 +61,5 @@ def offer_met(results, offer_count):
     if times_matched == 1000:
         return 0
     return times_matched
+
 
