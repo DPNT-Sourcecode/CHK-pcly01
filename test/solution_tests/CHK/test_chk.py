@@ -38,7 +38,10 @@ class TestChk():
         assert checkout_solution.checkout('S S S') == 45
 
     def test_chk_three_for_fourtyfive_offer(self):
-        assert checkout_solution.checkout('S ') == 45
+        assert checkout_solution.checkout('T X Y') == 45
+
+    def test_chk_double_three_for_fourtyfive_offer(self):
+        assert checkout_solution.checkout('T X Y S Z T') == 90
 
     def test_chk_multiple_different_offers(self):
         assert checkout_solution.checkout('A A A B B') == 175
@@ -57,3 +60,4 @@ class TestChk():
 
     def test_chk_no_input(self):
         assert checkout_solution.checkout('') == 0
+
