@@ -2,9 +2,15 @@ from lib.solutions.CHK import checkout_solution
 
 class TestChk():
     def test_chk(self):
-        assert checkout_solution.checkout('A B C D E') == 155
+        assert checkout_solution.checkout('A B C D E F') == 165
 
     def test_chk_two_e(self):
+        assert checkout_solution.checkout('E E') == 80
+
+    def test_chk_two_e_and_b_offer(self):
+        assert checkout_solution.checkout('E E B') == 80
+
+    def test_chk_two_f(self):
         assert checkout_solution.checkout('E E') == 80
 
     def test_chk_two_e_and_b_offer(self):
