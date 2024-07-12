@@ -60,4 +60,3 @@ class TestChk():
 
     def test_chk_no_input(self):
         assert checkout_solution.checkout('') == 0
-
