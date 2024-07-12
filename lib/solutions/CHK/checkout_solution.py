@@ -74,11 +74,12 @@ def offer_met(results, offer_count):
             #apply multi offers
             multi_count = 0
             for letter in o:
-                multi_count += results[letter]
+                multi_count += results.get(letter, 0)
             return multi_count/offer_count[o]
     if times_matched == 1000:
         return 0
     return times_matched
+
 
 
 
