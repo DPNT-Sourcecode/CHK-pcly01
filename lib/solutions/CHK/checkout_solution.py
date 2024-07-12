@@ -50,16 +50,21 @@ def checkout(skus):
 def offer_met(results, offer_count):
     times_matched = 1000
     for o in offer_count:
-        if 
-        if o in results:
-            if results[o] < offer_count[o]:
-                return 0
+        if len(o) == 1:
+            if o in results:
+                if results[o] < offer_count[o]:
+                    return 0
+                else:
+                    matched_count = results[o] // offer_count[o]
+                    if matched_count < times_matched:
+                        times_matched = matched_count
             else:
-                matched_count = results[o] // offer_count[o]
-                if matched_count < times_matched:
-                    times_matched = matched_count
-        else:
-            return 0
+                return 0
+        else :
+            #apply multi offers
+            multi_count = 0
+            for letter in o:
+                multi_count += results[letter]
     if times_matched == 1000:
         return 0
     return times_matched
