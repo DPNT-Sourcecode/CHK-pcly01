@@ -79,9 +79,3 @@ def offer_met(results, offer_count):
     if times_matched == 1000:
         return 0
     return times_matched
-
-
-
-
-
-
