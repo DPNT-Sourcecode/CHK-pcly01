@@ -47,7 +47,7 @@ class TestChk():
         assert checkout_solution.checkout('A A A B B') == 175
 
     def test_chk_multi_offer_remove_order(self):
-        assert checkout_solution.checkout('Z X Z Z') == 63
+        assert checkout_solution.checkout('Z X Z Z') == 62
 
     def test_chk_complicated_list(self):
         assert checkout_solution.checkout('A A A B B C C C D D D') == 280
@@ -63,4 +63,5 @@ class TestChk():
 
     def test_chk_no_input(self):
         assert checkout_solution.checkout('') == 0
+
 

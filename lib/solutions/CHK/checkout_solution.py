@@ -41,7 +41,6 @@ def checkout(skus):
                     res[o] = res.get(o, 0) - (offer['counts'][o] * times_met)
                 else :
                     amount_to_remove = offer['counts'][o] * times_met
-                    print(f'amount to remove = {amount_to_remove}')
                     for letter in o:
                         if res.get(letter, 0) < amount_to_remove:
                             amount_to_remove -= res.get(letter, 0)
@@ -76,10 +75,11 @@ def offer_met(results, offer_count):
             multi_count = 0
             for letter in o:
                 multi_count += results.get(letter, 0)
-            return multi_count/offer_count[o]
+            return multi_count//offer_count[o]
     if times_matched == 1000:
         return 0
     return times_matched
+
 
 
 
