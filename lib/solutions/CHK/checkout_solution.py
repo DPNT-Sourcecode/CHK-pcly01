@@ -15,6 +15,7 @@ new_offers = [
     {'counts': {'U': 4}, 'price': 120},
     {'counts': {'V': 3}, 'price': 130},
     {'counts': {'V': 2}, 'price': 90},
+    {'counts': {'ZSTYX': 3}, 'price': 45}, # order important to remove most expensive first
 ]
 
 # noinspection PyUnusedLocal
@@ -49,6 +50,7 @@ def checkout(skus):
 def offer_met(results, offer_count):
     times_matched = 1000
     for o in offer_count:
+        if 
         if o in results:
             if results[o] < offer_count[o]:
                 return 0
